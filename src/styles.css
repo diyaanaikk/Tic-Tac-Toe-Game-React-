@@ -1,0 +1,151 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #1f2933, #111827);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+/* GAME CONTAINER */
+.game {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.game-board {
+  background: #1f2937;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* STATUS TEXT */
+.status {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* BOARD */
+.board-row {
+  display: flex;
+}
+
+/* SQUARE */
+.square {
+  width: 90px;
+  height: 90px;
+  margin: 6px;
+  border-radius: 14px;
+  border: none;
+  background: #374151;
+  color: #fff;
+  font-size: 42px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.square:hover {
+  background: #4b5563;
+}
+
+.square:active {
+  transform: scale(0.95);
+}
+
+/* GAME INFO (MOVE HISTORY) */
+.game-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.game-info ol {
+  padding: 0;
+  list-style: none;
+}
+
+.game-info button {
+  background: transparent;
+  border: 1px solid #6b7280;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.game-info button:hover {
+  background: #6b7280;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 480px) {
+  .square {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+  }
+}
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* SCOREBOARD */
+.scoreboard {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.score {
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+
+.score.x {
+  background: #2563eb;
+}
+
+.score.o {
+  background: #dc2626;
+}
+
+/* CONTROLS */
+.controls {
+  display: flex;
+  gap: 14px;
+}
+
+.controls button {
+  background: #111827;
+  border: 1px solid #374151;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.controls button:hover:not(:disabled) {
+  background: #374151;
+}
+
